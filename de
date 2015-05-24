@@ -1,0 +1,28 @@
+2015-05-24 15:02:19 DEBUG IReportService:? - Loading db configuration for report code :emp
+2015-05-24 15:02:20 WARN  RetryUtil:? - failed to call DB Initialization. 1 of 3 runs.
+2015-05-24 15:02:20 ERROR IReportService:? - DB Retry failure :No signature of method: static java.lang.Thread.sleep() is applicable for argument types: (java.lang.String) values: [2000]
+Possible solutions: sleep(long), sleep(long), sleep(long, int), sleep(long, groovy.lang.Closure), stop(), grep()
+groovy.lang.MissingMethodException: No signature of method: static java.lang.Thread.sleep() is applicable for argument types: (java.lang.String) values: [2000]
+Possible solutions: sleep(long), sleep(long), sleep(long, int), sleep(long, groovy.lang.Closure), stop(), grep()
+	at groovy.lang.MetaClassImpl.invokeStaticMissingMethod(MetaClassImpl.java:1495)
+	at groovy.lang.MetaClassImpl.invokeStaticMethod(MetaClassImpl.java:1481)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaClassSite.call(StaticMetaClassSite.java:50)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:110)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:122)
+	at com.de.util.RetryUtil.retry(RetryUtil.groovy:16)
+	at com.de.util.RetryUtil$retry.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:110)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:146)
+	at com.de.service.ReportService.intiDB(ReportService.groovy:61)
+	at com.de.service.IReportService$intiDB.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:110)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:122)
+	at com.de.main.Exporter.main(Exporter.groovy:12)
+2015-05-24 15:02:20 DEBUG IReportService:? - Db Loaded ..
+2015-05-24 15:02:20 DEBUG IReportService:? - Starting generating report...
+2015-05-24 15:02:20 DEBUG IReportService:? - Loading report data..
+2015-05-24 15:02:20 DEBUG IReportService:? - Loading report done..
+2015-05-24 15:02:20 DEBUG IReportService:? - Final data is ..
